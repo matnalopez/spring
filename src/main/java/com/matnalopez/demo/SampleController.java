@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class SampleController {
 
-    @PostMapping("/index")
+    @GetMapping("/index")
     public String controller(Model model){
-        return "index";
+        model.addAttribute("attr", "attr");
+        return "index.html";
     }
 
 }
